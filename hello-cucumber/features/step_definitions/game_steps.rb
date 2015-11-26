@@ -1,10 +1,11 @@
-# encoding: utf-8
+# encoding: UTF-8
+
 Quando /^começo um novo jogo$/ do
 	@game = Game.new
-	@game.start
-end
+		@game.start
+	end
 
-Então /^Entao vejo a seguinte mensagem na tela:$/ do |text|
+	Então /^vejo a seguinte mensagem na tela:$/ do |text|
 	expect(@game.output).to include(text)
 end
 
